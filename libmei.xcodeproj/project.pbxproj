@@ -100,6 +100,8 @@
 		827EF456142CE661007B9789 /* mxmltomei.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 827EF455142CE661007B9789 /* mxmltomei.cpp */; };
 		828D9CD71434DD42008DEF7B /* parttime.xsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 825732E31431308800F3868D /* parttime.xsl */; };
 		82C136A0142CDC5200D052A0 /* mei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DBCCCF1312C85D00B46918 /* mei.framework */; };
+		82DA4BEE15754B8E00F4C1DD /* meixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82DA4BEC15754B8E00F4C1DD /* meixml.cpp */; };
+		82DA4BEF15754B8E00F4C1DD /* meixml.h in Headers */ = {isa = PBXBuildFile; fileRef = 82DA4BED15754B8E00F4C1DD /* meixml.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82FC79EF15057D070015DE42 /* layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 82FC79EE15057CF50015DE42 /* layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82FC79F015057D110015DE42 /* layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FC79ED15057CF50015DE42 /* layout.cpp */; };
 		82FC79F315057D5C0015DE42 /* solesmesmixins.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FC79F115057D510015DE42 /* solesmesmixins.cpp */; };
@@ -137,6 +139,15 @@
 			dstSubfolderSpec = 7;
 			files = (
 				828D9CD71434DD42008DEF7B /* parttime.xsl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DA4BE615754B1B00F4C1DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +275,8 @@
 		825732E31431308800F3868D /* parttime.xsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parttime.xsl; sourceTree = "<group>"; };
 		827EF455142CE661007B9789 /* mxmltomei.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mxmltomei.cpp; sourceTree = "<group>"; };
 		82C13696142CDC3500D052A0 /* mxmltomei */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mxmltomei; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DA4BEC15754B8E00F4C1DD /* meixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = meixml.cpp; path = src/meixml.cpp; sourceTree = "<group>"; };
+		82DA4BED15754B8E00F4C1DD /* meixml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = meixml.h; path = src/meixml.h; sourceTree = "<group>"; };
 		82FC79ED15057CF50015DE42 /* layout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = layout.cpp; path = src/modules/layout.cpp; sourceTree = "<group>"; };
 		82FC79EE15057CF50015DE42 /* layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = layout.h; path = src/modules/layout.h; sourceTree = "<group>"; };
 		82FC79F115057D510015DE42 /* solesmesmixins.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = solesmesmixins.cpp; path = src/modules/solesmesmixins.cpp; sourceTree = "<group>"; };
@@ -407,6 +420,8 @@
 				053321C21402DBF400B89665 /* meinamespace.cpp */,
 				053321C31402DBF400B89665 /* meinamespace.h */,
 				A1B63DA81445D89200029BB7 /* meicommon.h */,
+				82DA4BEC15754B8E00F4C1DD /* meixml.cpp */,
+				82DA4BED15754B8E00F4C1DD /* meixml.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -614,6 +629,7 @@
 				82FC79F415057D640015DE42 /* solesmesmixins.h in Headers */,
 				A1B63DA91445D89200029BB7 /* meicommon.h in Headers */,
 				A1F5D1791455D90100CE6CE6 /* mei.h in Headers */,
+				82DA4BEF15754B8E00F4C1DD /* meixml.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +694,7 @@
 				61DBCCCB1312C85D00B46918 /* Resources */,
 				61DBCCCC1312C85D00B46918 /* Sources */,
 				61DBCCCD1312C85D00B46918 /* Frameworks */,
+				82DA4BE615754B1B00F4C1DD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -826,6 +843,7 @@
 				0514A64313FD6C0900310111 /* xmlimport.cpp in Sources */,
 				0514A64513FD6C2100310111 /* xmlexport.cpp in Sources */,
 				053321C41402DBF400B89665 /* meinamespace.cpp in Sources */,
+				82DA4BEE15754B8E00F4C1DD /* meixml.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
