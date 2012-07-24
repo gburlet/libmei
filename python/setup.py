@@ -24,6 +24,10 @@ else:
             libraries = ["boost_python-mt", "mei"]
             library_dirs = ["/usr/local/lib", "/usr/lib"]
             runtime_library_dirs=["/usr/local/lib", "/usr/lib"]
+    elif sys.platform == "freebsd8":
+        libraries = ["boost_python", "mei"]
+        library_dirs = ["/usr/local/lib", "/usr/lib"]
+	runtime_library_dirs = ["/usr/local/lib", "/usr/lib"]
     link_args = ["-L/usr/local/lib","-L/usr/lib"]
 
 setup(
@@ -39,12 +43,14 @@ setup(
             libraries=libraries,
             extra_link_args=link_args,
             library_dirs=library_dirs,
+	    include_dirs=["/usr/local/include"],
             runtime_library_dirs=runtime_library_dirs
         ),
         Extension(os.path.join("pymei","_libmei_exceptions"), 
             [os.path.join("src","_libmei_exceptions.cpp")],
             libraries=libraries,
             extra_link_args=link_args,
+	    include_dirs=["/usr/local/include"],
             library_dirs=library_dirs,
             runtime_library_dirs=runtime_library_dirs
         ),
