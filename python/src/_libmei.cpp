@@ -176,20 +176,20 @@ void MeiXmlInstructions_PushToList(XmlInstructions* x, XmlProcessingInstruction*
  */
 template<typename T>
 struct VectorFromList {
-	VectorFromList() { 
+    VectorFromList() { 
         converter::registry::push_back(&convertible, &construct, type_id<vector<T*> >()); 
     }
 
-	static void* convertible(PyObject* obj_ptr){
-		if (!PySequence_Check(obj_ptr)) {
+    static void* convertible(PyObject* obj_ptr){
+        if (!PySequence_Check(obj_ptr)) {
             return 0;
         }
         else {
-		    return obj_ptr;
+            return obj_ptr;
         }
-	}
+    }
 
-	static void construct(PyObject* obj_ptr, converter::rvalue_from_python_stage1_data* data){
+    static void construct(PyObject* obj_ptr, converter::rvalue_from_python_stage1_data* data){
         // Get pointer to memory where the vector will be constructed
         void* storage = ((converter::rvalue_from_python_storage<std::vector<T*> >*)(data))->storage.bytes;
 
